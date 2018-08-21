@@ -11,7 +11,7 @@ var data = fs.readFileSync("./random.txt", "utf8");
 
 // Keys
 var spotify = new Spotify(keys.spotify);
-//var client = new Twitter(keys.twitter);
+
 
 // Logs userinput
 var search = process.argv[2];
@@ -21,6 +21,7 @@ var findThis = "";
 // Text colors
 var FgBlue = "\x1b[34m";
 var FgWhite = "\x1b[0m";
+var FgCyan =  "\x1b[36m";
 var FgGreen = "\x1b[32m";
 var FgMagenta = "\x1b[35m";
 
@@ -127,7 +128,7 @@ function liriBot() {
             break;
 
         default:
-            console.log("Not a valid input. Please use the following options: " + FgGreen + "\n * spotify-this-song " + FgCyan + "\n * my-tweets " + FgBlue + "\n * movie-this " + FgMagenta + "\n * do-what-it-says" + FgWhite)
+            console.log("Not a valid input. Please use the following options: " + FgGreen + "\n * spotify-this-song " + FgBlue + "\n * movie-this " + FgMagenta + "\n * do-what-it-says" + FgWhite)
             break;
     };
 };
