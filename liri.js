@@ -27,20 +27,57 @@ var FgMagenta = "\x1b[35m";
 
 // Turns user search into string for placement in urls (OMDB & Spotify)
 // i === 3 to capture the first meaningful userinput
+
 for (var i = 3; i < entireCmdLine.length; i++) {
     if (i > 3 && i < entireCmdLine.length) {
         findThis = findThis + "+" + entireCmdLine[i];
+
     } else {
         findThis += entireCmdLine[i];
+
     };
 };
+
+console.log(findThis);
 
 // Searches for results based on userinput 
 function liriBot() {
 
     switch (search) {
-        //case "concert-this":
-            
+        case "concert-this":
+
+        if (findThis === "") {
+            findThis = "Wonder+Bread+5" //  If the user doesn't type a band in, the program will output data for the movie 'Wonder Bread 5'
+        }
+        console.log(findThis);
+
+            var queryUrl = "https://rest.bandsintown.com/artists/" + findThis + "/events?app_id=" + keys.bandsintown.key;
+
+            var logIt = search.concat("," + findThis)
+
+            console.log("Searching " + FgCyan + "BandsInTown..." + FgWhite + "\n")
+
+            request(queryUrl, function (error, response, body) {
+                console.log(body);
+                if (error) {
+                    console.log(error);
+                } else if (!error) {
+                    console.log(FgCyan + "Venue Name: " + FgWhite + JSON.parse(body, null, 2).venue);
+                    console.log(FgBlue + "----------Bands in Town Search Results----------\n" + FgWhite);
+                    console.log(FgBlue + "\n---------------------------------------------" + FgWhite);
+                    fs.appendFile("log.txt", logIt + "\n", function (err) {
+                        if (err) {
+                            return console.log(err);
+                        }
+                        console.log("\nlog.txt was updated!\n");
+                    });
+                } else {
+                    console.log("That band does not exist in the " + FgCyan + "BandsInTown..." + FgWhite + "\n")
+                }
+
+            });
+
+            break;
 
         case "spotify-this-song":
             var logIt = search.concat("," + findThis)
@@ -128,7 +165,8 @@ function liriBot() {
             break;
 
         default:
-            console.log("Not a valid input. Please use the following options: " + FgGreen + "\n * spotify-this-song " + FgBlue + "\n * movie-this " + FgMagenta + "\n * do-what-it-says" + FgWhite)
+            console.log("Not a valid input. Please use the following options: "
+            + FgCyan + "\n * concert-this " + FgGreen + "\n * spotify-this-song " + FgBlue + "\n * movie-this " + FgMagenta + "\n * do-what-it-says" + FgWhite)
             break;
     };
 };
