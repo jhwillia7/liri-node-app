@@ -27,10 +27,10 @@ var concertThis = function () {
         }
         
         else {
-            var json = JSON.parse(body, null, 2);
+            var json = JSON.parse(body);
             console.log("========== Bands In Town SEARCH RESULTS ==========");
             console.log(json);
-            console.log("Venue Name: " + JSON.parse(body).venue);
+            console.log("Venue Name: " + json[0].venue.name);
 
             
         };

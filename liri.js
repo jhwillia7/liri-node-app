@@ -58,12 +58,14 @@ function liriBot() {
             console.log("Searching " + FgCyan + "BandsInTown..." + FgWhite + "\n")
 
             request(queryUrl, function (error, response, body) {
-                console.log(body);
                 if (error) {
-                    console.log(error);
+                    throw error;
                 } else if (!error) {
-                    console.log(FgCyan + "Venue Name: " + FgWhite + JSON.parse(body, null, 2).venue);
+                    var json = JSON.parse(body);
                     console.log(FgBlue + "----------Bands in Town Search Results----------\n" + FgWhite);
+                    console.log(FgCyan + "Venue Name: " + FgWhite + json[0].venue.name );
+                    console.log(FgCyan + "Venue Location: " + FgWhite + json[0].venue.city + ", " + json[0].venue.region);
+                    console.log(FgCyan + "Event Date: " + FgWhite + json[0].datetime);
                     console.log(FgBlue + "\n---------------------------------------------" + FgWhite);
                     fs.appendFile("log.txt", logIt + "\n", function (err) {
                         if (err) {
