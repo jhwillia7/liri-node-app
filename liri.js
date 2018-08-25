@@ -4,7 +4,7 @@ require("dotenv").config();
 var Spotify = require('node-spotify-api');
 var request = require('request');
 var terminalLink = require('terminal-link');
-
+var moment = require('moment');
 var fs = require("fs");
 var keys = require("./keys");
 var data = fs.readFileSync("./random.txt", "utf8");
@@ -65,7 +65,7 @@ function liriBot() {
                     console.log(FgBlue + "----------Bands in Town Search Results----------\n" + FgWhite);
                     console.log(FgCyan + "Venue Name: " + FgWhite + json[0].venue.name );
                     console.log(FgCyan + "Venue Location: " + FgWhite + json[0].venue.city + ", " + json[0].venue.region);
-                    console.log(FgCyan + "Event Date: " + FgWhite + json[0].datetime);
+                    console.log(FgCyan + "Event Date: " + FgWhite + (moment (json[0].datetime).format("MM/DD/YYYY")));
                     console.log(FgBlue + "\n---------------------------------------------" + FgWhite);
                     fs.appendFile("log.txt", logIt + "\n", function (err) {
                         if (err) {

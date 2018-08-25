@@ -29,3 +29,7 @@ concert-this,wonder+bread+5
 concert-this,the+eagles
 concert-this,creed
 concert-this,janet+jackson
+spotify-this-song,dancing+queen
+movie-this,speed
+concert-this,eagles
+concert-this,eagles
