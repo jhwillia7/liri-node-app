@@ -1,6 +1,6 @@
-Liri - a node application
+#Liri - a node application
 
-Overview
+##Overview
 In this application, I made LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
 To install these npm packages run these commands one at a time.
@@ -14,13 +14,17 @@ npm install spotify
 npm install request
 
 
-Commands to run LIRI
+##Commands to run LIRI
 Follow the format presented in these queries
 
 -node liri.js concert-this "<band name here>"
 -node liri.js spotify-this-song '<song name here>'
 -node liri.js movie-this '<movie name here>'
 -node liri.js do-what-it-says 
+
+## You can find an image of the output at the following link:
+
+![Image of Liri output](https://)
 
 API Credential sites
 Spotify: https://developer.spotify.com/my-applications/
