@@ -1,3 +1,4 @@
+// LIRI App/Bot
 require("dotenv").config();
 
 // NPM - Packages && Required files

@@ -1,7 +1,7 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "UC Irvine Coding Bootcamp August 2018 Homework Week 10: LIRI",
+  "description": "UC Irvine Coding Bootcamp August 2018 Homework: LIRI",
   "main": "keys.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
