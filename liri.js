@@ -64,10 +64,13 @@ function liriBot() {
                 } else if (!error) {
                     var json = JSON.parse(body);
                     console.log(FgBlue + "----------Bands in Town Search Results----------\n" + FgWhite);
-                    console.log(FgCyan + "Venue Name: " + FgWhite + json[0].venue.name );
-                    console.log(FgCyan + "Venue Location: " + FgWhite + json[0].venue.city + ", " + json[0].venue.region);
-                    console.log(FgCyan + "Event Date: " + FgWhite + (moment (json[0].datetime).format("MM/DD/YYYY")));
-                    console.log(FgBlue + "\n---------------------------------------------" + FgWhite);
+                    for (var i = 0; i < json.length; i++) {
+                    console.log(FgCyan + "Venue Name: " + FgWhite + json[i].venue.name );
+                    console.log(FgCyan + "Venue Location: " + FgWhite + json[i].venue.city + ", " + json[i].venue.region);
+                    console.log(FgCyan + "Event Date: " + FgWhite + (moment (json[i].datetime).format("MM/DD/YYYY")));
+                    console.log("\n")
+                    }
+                    console.log(FgBlue + "---------------------------------------------" + FgWhite);
                     fs.appendFile("log.txt", logIt + "\n", function (err) {
                         if (err) {
                             return console.log(err);

@@ -3,7 +3,7 @@
 ## Overview
 In this application, I made LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
-## To install these npm packages run these commands one at a time.
+## To install the npm packages run these commands one at a time.
 
 * npm install terminal-link
 * npm install omdbapi
