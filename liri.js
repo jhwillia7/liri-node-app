@@ -71,7 +71,7 @@ function liriBot() {
                     console.log("\n")
                     }
                     console.log(FgBlue + "---------------------------------------------" + FgWhite);
-                    fs.appendFile("log.txt", logIt + "\n", function (err) {
+                    fs.appendFile("./logs/log.txt", logIt + "\n", function (err) {
                         if (err) {
                             return console.log(err);
                         }
