@@ -1,35 +1,3 @@
-spotify-this-song,dancing+queen
-movie-this,speed
-concert-this,journey
-spotify-this-song,"I Want it That Way"
-movie-this,speed
-movie-this,speed
-movie-this,speed
-concert-this,dancing+queen
-concert-this,eagles
-movie-this,speed
-spotify-this-song,dancing+queen
-spotify-this-song,"I Want it That Way"
-spotify-this-song,"I Want it That Way"
-movie-this,speed
-spotify-this-song,dancing+queen
-concert-this,eagles
-concert-this,eagles
-concert-this,eagles
-concert-this,eagles
-concert-this,eagles
-concert-this,talking+heads
 concert-this,zac+brown
-concert-this,zac+brown
-concert-this,zac+brown+band
 concert-this,eagles
-concert-this,zac+brown
-concert-this,wonder+bread+5
-concert-this,the+eagles
-concert-this,zac+brown
-concert-this,doobie+brother
 concert-this,peter+frampton
-concert-this,celine+dion
-concert-this,peter+frampton
-concert-this,zac+brown
-concert-this,eagles
