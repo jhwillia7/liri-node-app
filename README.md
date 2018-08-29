@@ -22,7 +22,7 @@ Follow the format presented in these queries
 - node liri.js movie-this "movie name here"
 - node liri.js do-what-it-says 
 
-## You can find an image of the output at the following link:
+## Below is an image of the output you can expect:
 
 ![Image of Liri output](https://github.com/jhwillia7/liri-node-app/blob/master/images/liri-capture.PNG)
 
