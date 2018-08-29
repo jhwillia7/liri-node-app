@@ -30,3 +30,6 @@ concert-this,zac+brown
 concert-this,doobie+brother
 concert-this,peter+frampton
 concert-this,celine+dion
+concert-this,peter+frampton
+concert-this,zac+brown
+concert-this,eagles
