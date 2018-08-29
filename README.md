@@ -17,9 +17,9 @@ In this application, I made LIRI. LIRI is like iPhone's SIRI. However, while SIR
 ## Commands to run LIRI
 Follow the format presented in these queries
 
-- node liri.js concert-this <band name here>
-- node liri.js spotify-this-song 'song name here>
-- node liri.js movie-this <movie name here>
+- node liri.js concert-this "band name here"
+- node liri.js spotify-this-song "song name here"
+- node liri.js movie-this "movie name here"
 - node liri.js do-what-it-says 
 
 ## You can find an image of the output at the following link:
